@@ -22,6 +22,24 @@ body{
   margin: 50px 0px;
 }
 .App{
+  min-width: 500px;
   max-width: calc(100% - 300px);
   margin: 0 auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track, corner */
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: #0E131A;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #708097;
+  border-radius: 5px;
 }
