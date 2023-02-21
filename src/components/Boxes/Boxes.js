@@ -4,14 +4,14 @@ export default function Boxes(){
     return(
 <div className="container text-center">
         <div className="row">
-          <div className="col">
-          <Box/>
+          <div className="col mt-3">
+          <Box color='#FED766'/>
           </div>
-          <div className="col">
-            <Box/>
+          <div className="col mt-3">
+            <Box color='#009FB7'/>
           </div>
-          <div className="col">
-            <Box/>
+          <div className="col mt-3">
+            <Box color='#696773'/>
           </div>
         </div>
       </div>

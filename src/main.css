@@ -14,7 +14,7 @@ body{
 }
 .post{
   text-align: center;
-  width: 50%;
+  flex: 1;
 }
 .box-container{
   display: flex;
