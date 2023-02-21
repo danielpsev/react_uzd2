@@ -1,6 +1,6 @@
 body{
-  background-color: #1D2129;
-  color: #708097;
+  background-color: #1D2129 !important;
+  color: #708097 !important;
 }
 /* .items-container{
   display: flex;

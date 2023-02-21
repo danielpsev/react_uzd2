@@ -1,32 +1,15 @@
-import logo from './logo.svg';
 import './main.css';
 
 import Header from './components/Header/Header';
-import PostImage from './components/PostImage/PostImage';
-import PostContent from './components/PostContent/PostContent';
-import Box from './components/Box/Box';
+import Posts from './components/Posts/Posts';
+import Boxes from './components/Boxes/Boxes';
+
 function App() {
   return (
     <div className="App">
-      <Header/>
-
-      <div className='posts-container'>
-        <div className='post'>
-         <PostImage/>
-         <PostContent/>
-        </div>
-        <div className='post'>
-         <PostImage/>
-         <PostContent/>
-        </div>
-      </div>
-
-      <div className='box-container'>
-        <Box/>
-        <Box/>
-        <Box/>
-      </div>
-
+      <Header title='Lorem Ipsum'/>
+      <Posts />
+      <Boxes/>
     </div>
   );
 }
