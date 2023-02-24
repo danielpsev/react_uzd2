@@ -5,14 +5,12 @@ export default function Task(props) {
   const [task, setTask] = useState({ task: text, status: status });
 
   const removeTask = (e) => {
-    setTask({});
-    console.log(e);
-    //e.target.innerHTML = "";
-    console.log(e.target.parentNode);
+   e.target.parentNode.remove();
+   setTask({});
   };
-  let t = task.status ? " bg-success " : " bg-warning ";
+  let div_status_class = task.status ? " bg-success " : " bg-warning ";
   return (
-    <div className={"p2 mt-3 bg-opacity-25 " + t}>
+    <div className={"p2 mt-3 bg-opacity-25 " + div_status_class}>
       {task.status ? <FaRegCheckCircle /> : <FaRegCircle />}
       {task.task}
       <button
