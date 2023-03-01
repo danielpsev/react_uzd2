@@ -3,6 +3,7 @@ import "./Praktika_5.css";
 import { v4 as uuidv4 } from "uuid";
 import Task from "./Task/Task";
 export default function Praktika_5() {
+  const [taskInput, setTaskInput] = useState("");
   const [tasks, setTasks] = useState([
     {
       id: 1,
@@ -60,8 +61,29 @@ export default function Praktika_5() {
     );
   });
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (taskInput) {
+      const new_task = { id: uuidv4(), task: taskInput, status: false };
+      setTasks(() => [...tasks, new_task]);
+      setTaskInput("");
+    } else {
+      alert("Task input is empty");
+    }
+  };
+
   return (
     <div className="d-flex flex-column">
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          id="taskInput"
+          name="taskInput"
+          placeholder="Enter task"
+          value={taskInput}
+          onChange={(e) => setTaskInput(e.target.value)}
+        />
+      </form>
       <table className="table table-striped table-dark">
         <thead>
           <tr>
